@@ -7,7 +7,9 @@ body {
     flex-wrap: wrap;
 }
 
-h1, h2, .subtitulo-principal {
+h1,
+h2,
+.subtitulo-principal {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
 
@@ -28,6 +30,10 @@ em {
 main {
     flex-grow: 1;
     padding-bottom: 4em;
+}
+
+main a {
+    color: #ffbbb4;
 }
 
 .navegacao-site {
@@ -86,6 +92,30 @@ main {
     height: 40px;
     display: block;
     text-indent: -99999px;
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    position: absolute;
+    content: "";
+    top: 90%;
+    left: 0.5em;
+    height: 1em;
+    width: 1em;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    position: absolute;
+    content: attr(data-legenda);
+    top: 110%;
+    left: -2em;
+    height: 1em;
+    width: 300%;
+    color: #FFFFFF;
+    text-indent: 0;
+    text-transform: capitalize;
 }
 
 .twitter {
@@ -94,4 +124,33 @@ main {
 
 .linkedin {
     background-image: url("../imagens/linkedin.png");
+}
+
+main p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+.container {
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 0;
+}
+
+.subtitulo-texto {
+    font-size: 1.5em;
+}
+
+.rodape-pagina {
+    color: #F2FFFC;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: radial-gradient(ellipse at bottom left, #f3558899, rgba(243,85,136, 0.6) 65%,
+    black 65%, black 70%, transparent 70%, transparent);
+    background-size: 25% 100%;
+    background-repeat: no-repeat;
 }

@@ -1,0 +1,72 @@
+.container > p:first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px 0 black;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.citacao-bio {
+    background: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 1s, box-shadow 1s;
+    transition-delay: 0s, .5s;
+}
+
+.citacao-bio p {
+    position: relative;
+}
+
+blockquote:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
+}
+
+blockquote::before {
+    content: '“';
+    font-size: 1000%;
+    position: absolute;
+    color: #bbbbbb;
+    line-height: .8;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);
+    z-index: 1000;
+    transition-delay: .5s, 0s;
+    transform: scale(1.2) rotate(10deg);
+}
+
+.flores {
+    margin: 1em 0;
+    border-collapse: separate;
+    border-spacing: 0.25em;
+}
+
+.flores th {
+    font-weight: bold;
+    background-color: #ffbbb4;
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+
+.flores thead th {
+    background-color: #007944;
+    border: 1px solid #71A95A;
+}
+
+.flores td {
+    background-color: #EEE;
+}
+
+.flores th,
+.flores td {
+    padding: 1em;
+}
