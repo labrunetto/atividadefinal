@@ -9,6 +9,11 @@ main {
     padding: 0;
 }
 
+
+ {
+    height: 100%;
+}
+
 @-webkit-keyframes aparece {
     0% {
         transform: scale(0.0001);
@@ -16,102 +21,93 @@ main {
     }
 }
 
-@-webkit-keyframes float {
-    from {
-        top: -5px;
-    }
-    100% {
-        top: 5px;
-    }
-}
-
-@-webkit-keyframes float2 {
-    from {
-        top: 5px;
-    }
-    100% {
-        top: -5px;
-    }
-}
-
-.banner-twitter {
+.texto-principal {
     position: absolute;
-    top: 0;
-    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    text-align: center;
+    top: 100px;
+    width: 500px;
+    line-height: 60px;
+    height: 100px;
+
+}
+
+
+
+.foto-home {
+
+    width: 100%;
+    height: 400px;
+    border-bottom: .4rem solid black;
+}
+h3{
+    font-size: 1.5em;
+    color: black;
+}
+
+
+
+.secao-inicio {
+    padding: 4em;
+}
+
+.apresentacao p {
+    font-size: 1em;
+    color: #000000;
     line-height: 1;
+    padding: 2em;
+    text-shadow: 0 0 2em green;
+}
 
-    width: 14em;
-    padding: 1em 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    background-color: #f35588;
-    color: white;
-    border: .25em solid black;
-
-    font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.2em;
-
-    -webkit-transform: translate(calc(0.707 * (3.5em - 100%) + 100%), calc(-0.707 * 100%)) rotate(45deg);
-            transform: translate(calc(0.707 * (3.5em - 100%) + 100%), calc(-0.707 * 100%)) rotate(45deg);
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-
-    animation: aparece 0.5s;
+.ap-inicio{
+    font-size: 2.5em;
+    color: #000000;
+    animation: aparece 0.2s;
     animation-delay: 500ms;
     animation-fill-mode: backwards;
 }
 
-.foto-home {
-    height: 100px;
-}
-
-.secao-inicio {
-    padding: 2em;
-}
-
-.saudacao p {
-    font-size: 1.5em;
-    color: #99A;
-    line-height: 1;
-    padding: 2em;
-}
-
-.saudacao-inicio {
-    font-size: 3em;
-    color: #889;
-}
-
-.saudacao-ultima-linha {
+.ap-texto-inicio{
     text-align: right;
-    display: block;
-}
-
-.saudacao strong {
     font-size: 2em;
-    color: black;
-}
+    color: #000000;
+    line-height: 2;
+    padding: 2em;
 
-.saudacao em {
-    color: #ffbbb4;
+    animation: aparece 1s;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+}
+.ap-texto-meio{
+    text-align: right;
     font-size: 4em;
-    -webkit-transform: rotate(-5deg) skew(-10deg);
-            transform: rotate(-5deg) skew(-10deg);
-    display: inline-block;
-    position: relative;
+    color: #000000;
+    line-height: 1.5;
+    padding: 1.5em;
 
-    animation: float 1s infinite, float2 1s infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+    animation: aparece 1s;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
 }
 
-.saudacao-ultima-linha:hover em {
-    animation-play-state: paused;
+.ap-texto-fim{
+    text-align-all: right;
+    font-size: 2em;
+    color: #000000;
+    line-height: 1.5;
+    padding: 1.5em;
+
+    animation: aparece 1s;
+    animation-delay: 3000ms;
+    animation-fill-mode: backwards;
 }
+
 
 .botao-index {
     font-size: 1.25em;
-    background-color: #f35588;
-    color: #FFFFFF;
+    background-color: #007944;
+    color: #000000;
     padding: .5em;
     border: .2em solid black;
     display: block;
@@ -123,122 +119,82 @@ main {
 }
 
 .botao-index:hover {
-    text-shadow: 0 0 1em #FFAA99;
-    background-color: #ffbbb4;
+    text-shadow: 0 0 1em gray;
+    background-color: #EFC56E;
 }
 
-.secao-inicio h2 {
-    font-size: 3em;
-    text-transform: uppercase;
-    margin-bottom: .5em;
-    text-shadow: 2px 2px 2px #000000;
+.enfeite{
+    text-align: center;
+    font-size: 1.5em;
+    line-height: .1
 }
-
-.trabalhos {
-    background-color: #007944;
-    background-image: linear-gradient(135deg, transparent, transparent 14px,
-    rgba(0, 0, 0, 0.1) 14px, rgba(0, 0, 0, 0.1) 15px, transparent 15px, transparent);
+.posters {
+    background-color: #EFB11E;
+    /*background-image: linear-gradient(32deg, transparent, transparent 14px,*/
+    /*rgba(0, 0, 0, 0.1) 14px, rgba(0, 0, 0, 0.1) 15px, transparent 15px, transparent);*/
     background-size: 20px 20px;
     background-attachment: fixed;
-    border-top: .5em solid #000000;
-    border-bottom: .5em solid #000000;
+    border-top: .3em solid #000000;
+    border-bottom: .3em solid #000000;
 }
 
-.trabalhos h2 {
+.posters h2 {
     color: #FFFFFF;
+    text-shadow: 0 0 1em black;
 }
 
-.trabalhos ul {
+.posters ul {
     display: flex;
 }
 
-.trabalhos li {
+.posters li {
     flex: 1;
     border: .5em solid #000000;
 }
 
-.trabalhos li:first-child {
+.posters li:first-child {
     transform: scale(1.2);
     order: 2;
 }
 
-.trabalhos li:nth-child(2) {
+.posters li:nth-child(2) {
     order: 1;
 }
 
-.trabalhos li:last-child {
+.posters li:last-child {
     order: 3;
 }
 
-.trabalhos img {
+.posters img {
     width: 100%;
-    max-height: 230px;
+    height: 100%;
+    max-height: 200px;
     display: block;
 }
 
-.blog {
-    background-color: #71A95A;
-    background-image: linear-gradient(45deg, transparent, transparent 14px,
-    rgba(255, 255, 255, 0.1) 14px, rgba(255, 255, 255, 0.1) 15px, transparent 15px, transparent);
-    background-size: 20px 20px;
-    background-attachment: fixed;
-    color: #FFFFFF;
-    border-bottom: .5em solid #ffbbb4;
-    position: relative;
+
+
+
+.rodape-pagina {
+    color: #000000;
+    padding: 1em;
+    position: page;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: radial-gradient(ellipse at bottom center, #EFB11E, rgba(0,0,0, 0.5) 65%,
+    black 100%, black 70%, transparent 65%, transparent);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
 }
 
-.blog small {
-    position: relative;
-    top: -2em;
-}
 
-.blog li {
-    width: 30%;
-}
 
-.blog li a {
-    color: #FFCCFF;
-    padding: .5em;
-    display: block;
-}
 
-.blog .inicio-post {
-    display: none;
-    position: absolute;
-    top: 6em;
-    left: 30%;
-    right: 4em;
-    height: 8em;
-    background-color: #FFFFFF;
-    color: black;
-    padding: 1.5em;
-}
 
-.blog li a:hover,
-.blog li a:focus {
-    background-color: #FFFFFF;
-    color: #f35588;
-}
 
-.blog li a:hover + .inicio-post,
-.blog li a:focus + .inicio-post {
-    display: block;
-}
 
-footer {
-    background-color: black;
-    color: #FFFFFF;
-    padding: 2em;
-}
-
-footer h2 {
-    font-size: 3em;
-}
-
-footer a {
-    color: #ffbbb4;
-}
-
-footer a:hover {
-    color: #f35588;
+.rodape-pagina h2{
+    color: #000000;
 }

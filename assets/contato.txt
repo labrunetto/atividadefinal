@@ -1,1 +1,0 @@
-O nome precisa ter pelo menos 4 caracteres e não são permitidos números
